@@ -1,0 +1,23 @@
+@charset "UTF-8";
+@font-face {
+     font-family: 'Arial';
+     src: url('/public/fonts/Arial/Arial.woff') format('woff'),
+          url('/public/fonts/Arial/Arial.ttf') format('ttf');
+     /* Дополнительные форматы шрифтов, если необходимо */
+ }
+
+@import 'abstracts/variables';
+@import 'abstracts/mixins';
+@import 'base/reset';
+@import 'base/typography';
+
+@import 'components/buttons';
+@import 'components/slider';
+
+@import 'pages/section-direction';
+
+
+
+
+
+

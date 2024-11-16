@@ -1,0 +1,8 @@
+/* Mixins */
+@mixin vendor-prefix($name, $argument) {
+    #{$name}: $argument;
+    -webkit-#{$name}: $argument;
+    -ms-#{$name}: $argument;
+    -moz-#{$name}: $argument;
+    -o-#{$name}: $argument;
+  }

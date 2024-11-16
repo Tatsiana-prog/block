@@ -1,0 +1,90 @@
+.menu-btns {
+  margin: 0 auto;
+  animation: text-up ease-in 0.3s;
+  height: 60px;
+  text-align: center;
+}
+
+.btn {
+  position: relative;
+  display: inline-block;
+  padding: 10px 20px; /* Добавим фиксированный отступ  */
+  font-size: 15px;
+  cursor: pointer;
+  text-align: center;
+  margin-right: 20px;
+  animation: fadeIn ease-in 0.5s;
+  transition: all 0.3s ease; /* Плавный переход для цвета и трансформации */
+  &:last-child {
+    margin-right: 0;
+  }
+}
+
+.btn:hover, .btn:active {
+  padding: 5px 15px;
+  .main-text {
+      color: rgba(55, 119, 157, 1);
+      font-size: 20px; /* Увеличение шрифта при наведении */
+    }
+    .reflection {
+      top: 175%;
+      animation: fadeIn ease 0.5s;
+      opacity: 1; /* Установка прозрачности отражения */
+      //filter: blur(2); /* Убираем размытие при наведении */
+    }
+}
+
+.btn .main-text {
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 15px;
+  position: relative;
+  font-weight: 700;
+  z-index: 2; /* Основной текст выше отраженного */
+  transition: color 0.3s ease, font-size 0.3s ease; /* Плавный переход для цвета и размера текста */
+}
+
+.btn .reflection {
+  position: absolute;
+  top: 150%; /* Размещаем отражение ниже основного текста */
+  left: 0;
+  width: 100%;
+  transform: scaleY(-1); /* Зеркалим отражённый текст по вертикали */
+  transform-origin: top;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 26px;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+  background: linear-gradient(105.82deg, #08466B -43.96%, #37779D -5.6%, #71BDEB 43.21%, #37779D 109.46%, #08466B 157.91%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  opacity: 0; /* Изначально скрыто */
+  filter: blur(2px);
+  transition: all 0.3s ease; /* Плавный переход для прозрачности и размытия */
+}
+.description-button {
+  width:300px;
+  height: 50px;
+  position: absolute;
+  background: rgba(144, 15, 55, 0.9);
+  border-radius: 5px;
+  border: 1px solid grey; /* Устанавливаем ширину бордера */
+  bottom: -35px; /* Отступ от нижней части родителя */
+  left: 50%; /* Установка на 50% от левой стороны родителя */
+  transform: translateX(-50%); /* Сдвиг элемента на 50% его ширины */
+  text-align: center; /* Центрирование текста */
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.7); /* Тень по контуру кнопки */
+}
+
+.button {
+  display: inline-flex;
+  justify-content: center;
+  padding: 16px 40px;
+  font-family:'Arial', sans-serif;
+  font-size: 17px;
+  font-weight: 900;
+  text-transform: uppercase;
+  background: linear-gradient(to right, #727272, #B1B1B1, #E8E8E8, #A4A4A4, #424242);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}

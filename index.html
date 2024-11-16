@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="ru" data-lang="ru">
+	<head>
+		<!-- Encoding -->
+		<meta charset="UTF-8">
+		<!-- Mobile support -->
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<!-- Title and SEO -->
+		<title>Создание блока</title>
+		<!-- Styles -->
+		<link rel="stylesheet" href="src/style.css">
+		<!-- Favicons -->
+		<link rel="icon" href="public/img/favicon/fav-icon16.ico" type="image/x-icon">
+		<link rel="apple-touch-icon" sizes="180x180" href="public/img/favicon/apple-touch-icon.png">
+		<link rel="icon" type="image/png" sizes="32x32" href="public/img/favicon/favicon-32x32.png">
+		<link rel="icon" type="image/png" sizes="16x16" href="public/img/favicon/favicon-16x16.png">
+	</head>
+	<body>
+		<section class="section-direction">
+			<div class="container">
+				<div class="direction">
+					<div class="direction-row">
+						<h2 class="direction-title">Нужный инструмент</h2>
+					</div>
+					<div class="direction-slider">
+						<div class="carousel">
+							<div class="carousel-control-button left"><input type="radio" name="carousel-control-input"></div>
+							<div class="carousel-control-button right"><input type="radio" name="carousel-control-input" checked></div>
+							<div class="carousel-rotation-direction">
+								<ul class="carousel-item-wrapper" style="--_num-elements: 8">
+									<li class="carousel-item" style="--_index: 1; --_image-url: url('/public/img/translaters.png')"><a href="https://unsplash.com/de/fotos/ein-hohes-gebaude-mit-einer-uhr-an-der-seite-cI09n4yMIYc" target="_blank">Architecture Example 1</a></li>
+									<li class="carousel-item" style="--_index: 2; --_image-url: url('/public/img/government.png')"><a href="https://unsplash.com/de/fotos/ein-sehr-hohes-gebaude-mit-vielen-fenstern-3svDIdPOT6M" target="_blank">Architecture Example 2</a></li>
+									<li class="carousel-item" style="--_index: 3; --_image-url: url('/public/img/jurisprudence.png')"><a href="https://unsplash.com/de/fotos/ein-sehr-hohes-gebaude-mit-vielen-fenstern-ivYgEOo7MnQ" target="_blank">Architecture Example 3</a></li>
+									<li class="carousel-item" style="--_index: 4; --_image-url: url('/public/img/medicine.png')"><a href="https://unsplash.com/de/fotos/weiss-graues-gebaudekonzept-8yOPWMS46CQ" target="_blank">Architecture Example 4</a></li>
+									<li class="carousel-item" style="--_index: 5; --_image-url: url('/public/img/busines.png')"><a href="https://unsplash.com/de/fotos/ein-paar-hohe-gebaude-mit-vielen-fenstern-duj9YsiNKvM" target="_blank">Architecture Example 5</a></li>
+									<li class="carousel-item" style="--_index: 6; --_image-url: url('/public/img/students.png')"><a href="https://unsplash.com/de/fotos/die-spiegelung-eines-gebaudes-in-den-fenstern-eines-anderen-gebaudes-QT6ltyDT7UA" target="_blank">Architecture Example 6</a></li>
+									<li class="carousel-item" style="--_index: 7; --_image-url: url('/public/img/call.png')"><a href="https://unsplash.com/de/fotos/nahaufnahme-des-weissen-gebaudes-tKnda8e9ejM" target="_blank">Architecture Example 7</a></li>
+									<li class="carousel-item" style="--_index: 8; --_image-url: url('/public/img/journalists.png')"><a href="https://unsplash.com/de/fotos/ein-hohes-gebaude-mit-zwei-balkonen-und-einer-uhr-sYg7bcIodC8" target="_blank">Architecture Example 8</a></li>
+									<li class="carousel-ground"></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+					<div class="direction-desc">
+						<div class="menu-btns">
+							<button class="btn" id="btn1">
+								<span class="main-text">Бюро переводов</span>
+								<span class="reflection">Бюро переводов</span>
+							</button>
+							<button class="btn" id="btn2">
+								<span class="main-text">Гос. учереждения</span>
+								<span class="reflection">Гос. учереждения</span>
+							</button>
+							<button class="btn" id="btn3">
+								<span class="main-text">Юриспруденция</span>
+								<span class="reflection">Юриспруденция</span>
+							</button>
+							<button class="btn" id="btn4">
+								<span class="main-text">Здравоохранение</span>
+								<span class="reflection">Здравоохранение</span>
+							</button>
+							<button class="btn" id="btn5">
+								<span class="main-text">Бизнес</span>
+								<span class="reflection">Бизнес</span>
+							</button>
+							<button class="btn" id="btn6">
+								<span class="main-text">Образование</span>
+								<span class="reflection">Образование</span>
+							</button>
+							<button class="btn" id="btn7">
+								<span class="main-text">Call-центр</span>
+								<span class="reflection">Call-центр</span>
+							</button>
+							<button class="btn" id="btn8">
+								<span class="main-text">Журналистика</span>
+								<span class="reflection">Журналистика</span>
+							</button>
+						</div>
+						<div class="direction-boxes">
+							<div class="blocks-wrapper">
+								<div class="block" id="text1">Наш сервис транскрибации поможет вам быстро и качественно перевести аудио- и видеоматериалы, обеспечивая точный и полный перевод всей информации. Преимуществом использования сервиса для переводчиков является возможность быстрого доступа к текстовой версии исходных материалов, что значительно упрощает и ускоряет процесс перевода.</div>
+								<div class="block" id="text2">Наш сервис транскрибации идеально подходит для создания текстовых версий важных деловых переговоров, совещаний, презентаций и интервью. Благодаря транскрибации, вы сможете легко сохранять ценную информацию, быстро извлекать необходимые данные, делать выводы и принимать взвешенные решения на основе текстовых документов. Также фиксировать и анализировать в текстовом режиме работу сотрудников для повышения эффективности.</div>
+								<div class="block" id="text3">Транскрибация играет важную роль в юридической сфере, где точность и надежность информации имеют решающее значение. Перевод речи адвокатов, свидетелей и других участников процесса в текст помогает сохранить записи для будущего использования, обеспечивает документирование всех подробностей дела и снижает риск недоразумений или ошибок.</div>
+								<div class="block" id="text4">В медицинской сфере транскрибация помогает в записи медицинских обследований, рецептов, назначений врачей и даже проведенных консультаций. Это способствует более эффективной обработке информации, улучшает координацию между учреждениями здравоохранения и повышает общую эффективность работы медицинского персонала.</div>
+								<div class="block" id="text5">Наш сервис транскрибации идеально подходит для создания текстовых версий важных деловых переговоров, совещаний, презентаций и интервью. Благодаря транскрибации, вы сможете легко сохранять ценную информацию, быстро извлекать необходимые данные, делать выводы и принимать взвешенные решения на основе текстовых документов. Также фиксировать и анализировать в текстовом режими работу сотрудников для повышения эффективности.</div>
+								<div class="block" id="text6">Студенты и преподаватели найдут в нашем сервисе надежного помощника для транскрибации лекций, семинаров, исследований и прочих аудио- и видео-материалов. Транскрибированные тексты облегчат усвоение учебного материала, помогут быстрее находить нужную информацию, создавать качественные учебные материалы и обеспечат эффективное взаимодействие с учащимися.</div>
+								<div class="block" id="text7">Call-центры могут воспользоваться нашим сервисом для транскрибации телефонных разговоров  с клиентами. Это позволит сохранить и анализировать информацию, улучшить обслуживание клиентов, контролировать качество общения операторов и повысить эффективность работы call-центра в целом. Точные транскрибированные записи помогут оперативно реагировать на запросы и потребности клиентов.</div>
+								<div class="block" id="text8">Журналисты могут воспользоваться нашим сервисом для быстрой и точной транскрибации интервью, подкастов, видео- и аудиоматериалов. Это сэкономит им время на переписывание и транскрибацию речи, позволит быстрее подготовить материалы для статей, репортажей и других публикаций. Точность транскрибации поможет избежать ошибок и улучшить качество вашей работы.</div>
+							</div>
+							<div class="description-button">
+								<button class="button">Попробовать</button>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+	<script src="src/js/index.js"></script>
+	</body>
+</html>

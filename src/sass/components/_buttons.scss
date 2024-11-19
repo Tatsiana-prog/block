@@ -20,7 +20,7 @@
   }
 }
 
-.btn:hover, .btn:active {
+.btn:hover, .btn:active, .btn.active {
   padding: 5px 15px;
   .main-text {
       color: rgba(55, 119, 157, 1);
@@ -65,26 +65,151 @@
 .description-button {
   width:300px;
   height: 50px;
-  position: absolute;
-  background: rgba(144, 15, 55, 0.9);
-  border-radius: 5px;
-  border: 1px solid grey; /* Устанавливаем ширину бордера */
-  bottom: -35px; /* Отступ от нижней части родителя */
-  left: 50%; /* Установка на 50% от левой стороны родителя */
-  transform: translateX(-50%); /* Сдвиг элемента на 50% его ширины */
-  text-align: center; /* Центрирование текста */
-  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.7); /* Тень по контуру кнопки */
+  margin: 0 auto;
 }
 
-.button {
-  display: inline-flex;
+.card-wrap {
+  perspective: 250px;
+  transform-style: preserve-3d;
+  cursor: pointer;
+  z-index: 2000;
+  position: relative;
+  margin-top: 20px;
+}
+//Button
+.card {
+  position: relative;
+  width: 300px !important;
+  user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  padding: 17px;
+
+  height: 51px;
+  overflow: hidden;
+  border-radius: 4px;
+  transition: transform 0.5s ease-out;
+  z-index: 1;
+  color: #fff;
+  cursor: pointer;
+  box-sizing: border-box;
+  border: 1px solid transparent;
+  background: linear-gradient(rgba(144, 15, 55, 1), rgba(144, 15, 55, 1))
+      padding-box,
+    linear-gradient(
+        90deg,
+        rgba(232, 232, 232, 1),
+        rgba(177, 177, 177, 1) 19%,
+        rgba(232, 232, 232, 1) 50%,
+        rgba(164, 164, 164, 1) 76%,
+        rgba(232, 232, 232, 1)
+      )
+      border-box;
+  background-clip: padding-box, border-box;
+
+  display: flex;
+  align-items: center;
   justify-content: center;
-  padding: 16px 40px;
-  font-family:'Arial', sans-serif;
-  font-size: 17px;
-  font-weight: 900;
-  text-transform: uppercase;
-  background: linear-gradient(to right, #727272, #B1B1B1, #E8E8E8, #A4A4A4, #424242);
+  backface-visibility: hidden;
+}
+
+.card.fast-click {
+  background: #590620;
+  box-shadow: inset -2px -2px 8px 0 rgba(0, 0, 0, 0.5),
+    inset 2px 2px 8px 0 rgba(0, 0, 0, 0.5);
+  border: 1px solid transparent;
+  background: linear-gradient(#590620, #590620) padding-box,
+    linear-gradient(
+        90deg,
+        rgba(232, 232, 232, 1),
+        rgba(177, 177, 177, 1) 19%,
+        rgba(232, 232, 232, 1) 50%,
+        rgba(164, 164, 164, 1) 76%,
+        rgba(232, 232, 232, 1)
+      )
+      border-box;
+}
+
+.card-content span.fast-click {
+  transform: scale(0.97);
+  transition: all 0.2s ease;
+}
+
+.card:active span.fast-click {
+  transform: scale(0.97);
+  transition: all 0.2s ease;
+}
+.card:active span {
+  transform: scale(0.97);
+  transition: all 0.2s ease;
+}
+
+.card::before {
+  background: radial-gradient(
+    250px circle at var(--mouse-x) var(--mouse-y),
+    #c7c7c738,
+    transparent 30%
+  );
+  border-radius: inherit;
+  content: "";
+  height: 100%;
+  left: 0px;
+  position: absolute;
+  top: 0px;
+  width: 100%;
+  opacity: 0;
+  transition: opacity 300ms ease;
+  z-index: 20;
+}
+
+.card:hover::before {
+  opacity: 1;
+}
+.card:active {
+  background: #590620;
+  box-shadow: inset -2px -2px 8px 0 rgba(0, 0, 0, 0.5),
+    inset 2px 2px 8px 0 rgba(0, 0, 0, 0.5);
+  border: 1px solid transparent;
+  background: linear-gradient(#590620, #590620) padding-box,
+    linear-gradient(
+        90deg,
+        rgba(232, 232, 232, 1),
+        rgba(177, 177, 177, 1) 19%,
+        rgba(232, 232, 232, 1) 50%,
+        rgba(164, 164, 164, 1) 76%,
+        rgba(232, 232, 232, 1)
+      )
+      border-box;
+}
+.card-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2;
+}
+.card-content span {
+  font-family: "ST-SimpleSquare";
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 110%;
+  letter-spacing: 0.06em;
+  text-align: center;
+  background: linear-gradient(
+    140deg,
+    #727272 0%,
+    #b1b1b1 19%,
+    #e8e8e8 50%,
+    #a4a4a4 76%,
+    #424242 100%
+  );
+  background-clip: text;
+  will-change: transform;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  backface-visibility: hidden;
+
+  transition: none;
+  transform: translateZ(0);
+  will-change: transform;
 }

@@ -16,16 +16,14 @@
   font-family:'Arial', sans-serif;
   font-size: 36px;
   font-weight: 700;
-  text-transform: uppercase;
   line-height: 43.2px;
-  background: linear-gradient(to right, #727272, #B1B1B1, #E8E8E8, #A4A4A4, #424242);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  color:#cccccc;
 }
 
 .direction-slider {
+  transform: rotate(-33deg);
   //display: none;
-  margin:0 auto 200px auto ;
+  margin: 200px auto ;
 }
 .direction-desc {
   width: 100%;
@@ -88,9 +86,9 @@
   }
 }
 .slide-in {
-  animation: slideIn 1s ease-in-out forwards; 
+  animation: slideIn 1s ease-in-out forwards;
 }
 
 .slide-left {
-  animation: slideLeft 2s ease-in-out forwards;
+  animation: slideLeft 1.5s ease-in-out forwards;
 }

@@ -23,27 +23,30 @@
 						<h2 class="direction-title">Нужный инструмент</h2>
 					</div>
 					<div class="direction-slider">
-						<div class="carousel">
-							<div class="carousel-control-button left"><input type="radio" name="carousel-control-input"></div>
-							<div class="carousel-control-button right"><input type="radio" name="carousel-control-input" checked></div>
-							<div class="carousel-rotation-direction">
-								<ul class="carousel-item-wrapper" style="--_num-elements: 8">
-									<li class="carousel-item" style="--_index: 1; --_image-url: url('/public/img/translaters.png')"><a href="https://unsplash.com/de/fotos/ein-hohes-gebaude-mit-einer-uhr-an-der-seite-cI09n4yMIYc" target="_blank">Architecture Example 1</a></li>
-									<li class="carousel-item" style="--_index: 2; --_image-url: url('/public/img/government.png')"><a href="https://unsplash.com/de/fotos/ein-sehr-hohes-gebaude-mit-vielen-fenstern-3svDIdPOT6M" target="_blank">Architecture Example 2</a></li>
-									<li class="carousel-item" style="--_index: 3; --_image-url: url('/public/img/jurisprudence.png')"><a href="https://unsplash.com/de/fotos/ein-sehr-hohes-gebaude-mit-vielen-fenstern-ivYgEOo7MnQ" target="_blank">Architecture Example 3</a></li>
-									<li class="carousel-item" style="--_index: 4; --_image-url: url('/public/img/medicine.png')"><a href="https://unsplash.com/de/fotos/weiss-graues-gebaudekonzept-8yOPWMS46CQ" target="_blank">Architecture Example 4</a></li>
-									<li class="carousel-item" style="--_index: 5; --_image-url: url('/public/img/busines.png')"><a href="https://unsplash.com/de/fotos/ein-paar-hohe-gebaude-mit-vielen-fenstern-duj9YsiNKvM" target="_blank">Architecture Example 5</a></li>
-									<li class="carousel-item" style="--_index: 6; --_image-url: url('/public/img/students.png')"><a href="https://unsplash.com/de/fotos/die-spiegelung-eines-gebaudes-in-den-fenstern-eines-anderen-gebaudes-QT6ltyDT7UA" target="_blank">Architecture Example 6</a></li>
-									<li class="carousel-item" style="--_index: 7; --_image-url: url('/public/img/call.png')"><a href="https://unsplash.com/de/fotos/nahaufnahme-des-weissen-gebaudes-tKnda8e9ejM" target="_blank">Architecture Example 7</a></li>
-									<li class="carousel-item" style="--_index: 8; --_image-url: url('/public/img/journalists.png')"><a href="https://unsplash.com/de/fotos/ein-hohes-gebaude-mit-zwei-balkonen-und-einer-uhr-sYg7bcIodC8" target="_blank">Architecture Example 8</a></li>
-									<li class="carousel-ground"></li>
-								</ul>
+						<div id="drag-container">
+							<div id="spin-container">
+							  <!-- Add your images (or video) here -->
+							  <img src="./public/img/translaters.png" alt="image" id="img1">
+							  <img src="./public/img/government.png" id="img2" alt="image">
+							  <img src="./public/img/jurisprudence.png" id="img3" alt="image">
+							  <img src="./public/img/medicine.png" id="img4" alt="image">
+							  <img src="./public/img/busines.png" id="img5" alt="image">
+							  <img src="./public/img/students.png" id="img6" alt="image">
+							  <img src="./public/img/call.png" id="img7" alt="image">
+							  <img src="./public/img/journalists.png" id="img8" alt="image">
+							  <!-- Example image with link -->
+							  <!-- Example add video  -->
+							  <video controls autoplay="autoplay" loop>
+								<source src="https://player.vimeo.com/external/322244668.sd.mp4?s=338c48ac2dfcb1d4c0689968b5baf94eee6ca0c1&profile_id=165&oauth2_token_id=57447761" type="video/mp4">
+							  </video>
+							  <!-- Text at center of ground -->
 							</div>
-						</div>
+							<div id="ground"></div>
+						  </div>
 					</div>
 					<div class="direction-desc">
 						<div class="menu-btns">
-							<button class="btn" id="btn1">
+							<button class="btn active" id="btn1">
 								<span class="main-text">Бюро переводов</span>
 								<span class="reflection">Бюро переводов</span>
 							</button>
@@ -88,7 +91,13 @@
 								<div class="block" id="text8">Журналисты могут воспользоваться нашим сервисом для быстрой и точной транскрибации интервью, подкастов, видео- и аудиоматериалов. Это сэкономит им время на переписывание и транскрибацию речи, позволит быстрее подготовить материалы для статей, репортажей и других публикаций. Точность транскрибации поможет избежать ошибок и улучшить качество вашей работы.</div>
 							</div>
 							<div class="description-button">
-								<button class="button">Попробовать</button>
+								<div class="card-wrap">
+								  <div class="card">
+									<div class="card-content">
+									  <span>Регистрация</span>
+									</div>
+								  </div>
+								</div>
 							</div>
 						</div>
 					</div>
@@ -96,5 +105,6 @@
 			</div>
 		</section>
 	<script src="src/js/index.js"></script>
+	<script src="src/js/button.js"></script>
 	</body>
 </html>

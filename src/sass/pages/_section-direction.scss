@@ -1,35 +1,47 @@
 .section-direction {
-  padding: 50px 0;
+  padding: 100px 0;
 }
 
-.direction {
-}
 .direction-row {
   display: flex;
   justify-content: center;
   align-items: center; /* Центрирование по вертикали (если нужно) */ 
 }
-
+.direction-box {
+  position: relative;
+  width: 1100px;
+  margin: 0 auto;
+  cursor: pointer;
+  &:hover  {
+    & .mouse {
+      opacity: 1;
+      animation: fadeIn 0.5s ease-in;
+    }
+  }
+}
+.mouse {
+  position: absolute;
+  top:50%;
+  right: 0;
+  opacity: 0;
+}
 .direction-title {
   display: inline-flex;
   justify-content: center;
   font-family:'Arial', sans-serif;
-  font-size: 36px;
-  font-weight: 700;
+  font-size: 40px;
   line-height: 43.2px;
   color:#cccccc;
 }
 
 .direction-slider {
   transform: rotate(-33deg);
-  //display: none;
-  margin: 200px auto ;
+  margin: 300px auto ;
 }
 .direction-desc {
   width: 100%;
   margin: 0 auto;
 }
-
 .direction-boxes {
   position: relative;
   height: 183px;

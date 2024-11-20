@@ -1,9 +1,9 @@
 document.addEventListener('DOMContentLoaded', function() {
-  var radius = 240; // Размер радиуса
+  var radius = 30; // Размер радиуса
   var autoRotate = true; // Автоматическое вращение
   var rotateSpeed = -60; // скорость вращения
-  var imgWidth = 170;
-  var imgHeight = 120; // Высота изображений
+  var imgWidth = 303;
+  var imgHeight = 215; // Высота изображений
 
   let autoSpinInterval;  // Здесь объявляем переменную
 
@@ -114,10 +114,10 @@ document.addEventListener('DOMContentLoaded', function() {
   // Обработчик для кнопок
   buttons.forEach((button, index) => {
     button.addEventListener('click', function () {
-       // Убираем класс active у всех кнопок
-       buttons.forEach(btn => btn.classList.remove('active'));
-       // Добавляем класс active к текущей кнопке
-       this.classList.add('active');
+      // Убираем класс active у всех кнопок
+      buttons.forEach(btn => btn.classList.remove('active'));
+      // Добавляем класс active к текущей кнопке
+      this.classList.add('active');
       // Останавливаем автопрокрутку
       clearInterval(autoSpinInterval);
 
@@ -131,8 +131,28 @@ document.addEventListener('DOMContentLoaded', function() {
       setTimeout(() => {
         autoSpinInterval = setInterval(autoSpin, Math.abs(rotateSpeed) * 1000);
       }, 5000);
+
+      // Перемещаем кликнутую кнопку на 3-й индекс (что соответствует 4-й позиции)
+      moveButtonToThirdPosition(this);
     });
   });
+
+  // Функция для перемещения кнопки на 3-й индекс
+  function moveButtonToThirdPosition(clickedButton) {
+    let parent = clickedButton.parentNode;  // Получаем родительский элемент (контейнер для кнопок)
+    let buttonsArray = Array.from(parent.children);  // Получаем все кнопки в родительском контейнере
+
+    // Если кликнутая кнопка не на 4-й позиции, перемещаем ее туда
+    let currentIndex = buttonsArray.indexOf(clickedButton);
+    if (currentIndex !== 3) {
+      // Убираем кликнутую кнопку из текущей позиции
+      buttonsArray.splice(currentIndex, 1);
+      // Вставляем ее на 4-ю позицию
+      buttonsArray.splice(3, 0, clickedButton);
+      // Перезаписываем порядок кнопок в родительском элементе
+      buttonsArray.forEach(button => parent.appendChild(button));
+    }
+  }
 
   // Функция для обработки кликов по кнопке и переключения текста
   function handleClick(index) {

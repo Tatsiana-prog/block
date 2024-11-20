@@ -170,6 +170,7 @@ section {
   }
 }
 .menu-btns {
+  width: 1100px;
   margin: 0 auto;
   animation: text-up ease-in 0.3s;
   height: 60px;
@@ -179,11 +180,10 @@ section {
 .btn {
   position: relative;
   display: inline-block;
-  padding: 10px 20px; /* Добавим фиксированный отступ  */
+  padding: 10px 5px; /* Добавим фиксированный отступ  */
   font-size: 15px;
   cursor: pointer;
   text-align: center;
-  margin-right: 20px;
   animation: fadeIn ease-in 0.5s;
   transition: all 0.3s ease; /* Плавный переход для цвета и трансформации */
 }
@@ -225,7 +225,7 @@ section {
   line-height: 26px;
   text-underline-position: from-font;
   text-decoration-skip-ink: none;
-  background: linear-gradient(105.82deg, #08466B -43.96%, #37779D -5.6%, #71BDEB 43.21%, #37779D 109.46%, #08466B 157.91%);
+  background: linear-gradient(0deg, #37779D, #37779D), linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, #000000 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   opacity: 0; /* Изначально скрыто */
@@ -358,7 +358,7 @@ section {
   animation: rotate 15s infinite linear;
 }
 
-#drag-container img, #drag-container video {
+#drag-container img {
   -webkit-transform-style: preserve-3d;
   transform-style: preserve-3d;
   position: absolute;
@@ -369,13 +369,7 @@ section {
   line-height: 200px;
   font-size: 50px;
   text-align: center;
-  -webkit-box-shadow: 0 0 8px #fff;
-  box-shadow: 0 0 8px #fff;
-}
-
-#drag-container img:hover, #drag-container video:hover {
-  -webkit-box-shadow: 0 0 15px rgba(255, 255, 255, 0.8666666667);
-  box-shadow: 0 0 15px rgba(255, 255, 255, 0.8666666667);
+  border-radius: 15px;
 }
 
 #drag-container p {
@@ -396,7 +390,6 @@ section {
   left: 50%;
   -webkit-transform: translate(-50%, -50%) rotateX(90deg);
   transform: translate(-50%, -50%) rotateX(90deg);
-  background: -webkit-radial-gradient(center center, farthest-side, rgba(153, 153, 153, 0.2), transparent);
 }
 
 @-webkit-keyframes spin {
@@ -448,7 +441,7 @@ section {
   }
 }
 .section-direction {
-  padding: 50px 0;
+  padding: 100px 0;
 }
 
 .direction-row {
@@ -457,19 +450,36 @@ section {
   align-items: center; /* Центрирование по вертикали (если нужно) */
 }
 
+.direction-box {
+  position: relative;
+  width: 1100px;
+  margin: 0 auto;
+  cursor: pointer;
+}
+.direction-box:hover .mouse {
+  opacity: 1;
+  animation: fadeIn 0.5s ease-in;
+}
+
+.mouse {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  opacity: 0;
+}
+
 .direction-title {
   display: inline-flex;
   justify-content: center;
   font-family: "Arial", sans-serif;
-  font-size: 36px;
-  font-weight: 700;
+  font-size: 40px;
   line-height: 43.2px;
   color: #cccccc;
 }
 
 .direction-slider {
   transform: rotate(-33deg);
-  margin: 200px auto;
+  margin: 300px auto;
 }
 
 .direction-desc {

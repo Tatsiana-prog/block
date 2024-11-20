@@ -1,12 +1,12 @@
 .section-direction {
   padding: 100px 0;
 }
-
 .direction-row {
   display: flex;
   justify-content: center;
   align-items: center; /* Центрирование по вертикали (если нужно) */ 
 }
+
 .direction-box {
   position: relative;
   width: 1100px;
@@ -33,9 +33,7 @@
   line-height: 43.2px;
   color:#cccccc;
 }
-
 .direction-slider {
-  transform: rotate(-33deg);
   margin: 300px auto ;
 }
 .direction-desc {
@@ -53,7 +51,6 @@
   border-image-slice: 1; /* Задаем, как делить изображение (градиент) */
   border-image-width: 1px; /* Устанавливаем ширину бордера */
 }
-
 .blocks-wrapper {
   margin: 0 auto;
   position: relative;
@@ -62,7 +59,6 @@
   text-align: center;
   overflow: hidden; /* Скрываем выходящие элементы */
 }
-
 .block {
   position: absolute;
   width: 100%;
@@ -71,11 +67,10 @@
   justify-content: center;
   align-items: center;
   font-size: 20px;
-  font-weight: 500;
+  font-weight: 400;
   color: white;
   opacity: 0;
 }
-
 @keyframes slideLeft {
   from {
       transform: translateX(0);
@@ -96,11 +91,9 @@
       opacity: 1; /* Конечная прозрачность */
   }
 }
-
 .slide-in {
   animation: slideIn 1s ease-in-out forwards;
 }
-
 .slide-left {
   animation: slideLeft 2.5s ease-in-out forwards;
 }

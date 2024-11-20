@@ -1,11 +1,5 @@
 document.addEventListener('DOMContentLoaded', function() {
-  
-
-//конец карусели
-
-
-
-  // Массив кнопок и элементов с текстом
+ // Массив кнопок и элементов с текстом
   let buttons = [];
   let textElements = [];
 
@@ -34,8 +28,6 @@ document.addEventListener('DOMContentLoaded', function() {
     currentTextElement.style.display="block";
 
   }
-  
-    
 
   // Обработчик для кнопок
   buttons.forEach((button, index) => {
@@ -43,16 +35,15 @@ document.addEventListener('DOMContentLoaded', function() {
       // Убираем класс active у всех кнопок
       buttons.forEach(btn => btn.classList.remove('active'));
       // Добавляем класс active к текущей кнопке
-      this.classList.add('active'); 
+      this.classList.add('active');
 
       // Показываем/скрываем текст при клике на кнопку
-      handleClick(index);      
+      handleClick(index);
       // Перемещаем кликнутую кнопку на 3-й индекс (что соответствует 4-й позиции)
       moveButtonToThirdPosition(this);
     });
   });
-// Инициализируем начальный текст
-
+  handleClick(3);
   // Функция для перемещения кнопки на 3-й индекс
   function moveButtonToThirdPosition(clickedButton) {
     let parent = clickedButton.parentNode;  // Получаем родительский элемент (контейнер для кнопок)

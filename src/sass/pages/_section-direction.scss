@@ -86,7 +86,6 @@
       opacity: 0; /* Уменьшаем прозрачность при сдвиге */
   }
 }
-
 @keyframes slideIn {
   from {
       transform: translateX(-100%); /* Начинаем слева */
@@ -97,10 +96,11 @@
       opacity: 1; /* Конечная прозрачность */
   }
 }
+
 .slide-in {
   animation: slideIn 1s ease-in-out forwards;
 }
 
 .slide-left {
-  animation: slideLeft 1.5s ease-in-out forwards;
+  animation: slideLeft 2.5s ease-in-out forwards;
 }

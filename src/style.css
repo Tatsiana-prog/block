@@ -2,7 +2,6 @@
 @font-face {
   font-family: "Arial";
   src: url("/public/fonts/Arial/Arial.woff") format("woff"), url("/public/fonts/Arial/Arial.ttf") format("ttf");
-  /* Дополнительные форматы шрифтов, если необходимо */
 }
 /* Mixins */
 /* Reset and base styles  */
@@ -172,7 +171,7 @@ section {
 .menu-btns {
   width: 1100px;
   margin: 0 auto;
-  animation: text-up ease-in 0.3s;
+  animation: textUp ease-in 0.3s;
   height: 60px;
   text-align: center;
 }
@@ -184,8 +183,6 @@ section {
   font-size: 15px;
   cursor: pointer;
   text-align: center;
-  animation: fadeIn ease-in 0.5s;
-  transition: all 0.3s ease; /* Плавный переход для цвета и трансформации */
 }
 .btn:last-child {
   margin-right: 0;
@@ -193,6 +190,7 @@ section {
 
 .btn:hover, .btn:active, .btn.active {
   padding: 5px 15px;
+  animation: fadeIn ease-in 0.7s;
 }
 .btn:hover .main-text, .btn:active .main-text, .btn.active .main-text {
   color: rgb(55, 119, 157);
@@ -546,7 +544,7 @@ section {
 }
 
 .slide-left {
-  animation: slideLeft 1.5s ease-in-out forwards;
+  animation: slideLeft 2.5s ease-in-out forwards;
 }
 
 /*# sourceMappingURL=style.css.map */

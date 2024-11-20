@@ -3,8 +3,7 @@
      font-family: 'Arial';
      src: url('/public/fonts/Arial/Arial.woff') format('woff'),
           url('/public/fonts/Arial/Arial.ttf') format('ttf');
-     /* Дополнительные форматы шрифтов, если необходимо */
- }
+}
 
 @import 'abstracts/variables';
 @import 'abstracts/mixins';
